@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script src="./tengine.js"> </script>
+    <script type="text/javascript">
+
+var template = 'My skills:' +
+           '{{# if(this.showSkills) { #}}' +
+           '{{# for(var index in this.skills) { #}}' +
+           '{{# this.skills[index] #}}' +
+           '<p> Hello world </p>' +
+           '{{# } #}}' +
+           '{{# } else { #}}' +
+           'none' +
+           '{{# } #}}';
+ 
+       console.log(TemplateEngine(template, {
+           skills: ["js", "html", "css"],
+           showSkills: true
+       }));
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
